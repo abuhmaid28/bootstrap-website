@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+body {
+  font-size: 16px;
+}
+
+.brands_section img {
+  filter: grayscale(100);
+  transition: 0.4s all ease;
+}
+.brands_section img:hover {
+  filter: grayscale(0);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+h2 {
+  position: relative;
+}
+h2::after, h2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+h2::after {
+  transform: translate(-50%, 2rem);
+  width: 7.5rem;
+  height: 0.1rem;
+  background-color: #cfd7eb;
+}
+h2::before {
+  transform: translate(-50%, 1.96rem);
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #47b2e4;
+  z-index: 1;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.bg-img {
+  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url(../images/cta-bg.jpg) center fixed;
+  background-size: cover;
+}
+
+p.after::after {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 1px;
+  background-color: #47b2e4;
+  bottom: 0;
+  left: 0;
+  transform: translate(0%, 0.5rem);
+}
