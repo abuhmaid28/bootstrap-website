@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+@import "variables";
+
+body {
+  font-size: 16px;
+}
+// navbar scroll background
+.bg-half {
+  background-color: rgba($navBg, 0.9) !important;
+}
+// change default bootstrap navbar toggler from dark to white
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(255,255,255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+// brands_section
+.brands_section img {
+  filter: grayscale(100);
+  transition: 0.5s all ease;
+  cursor: pointer;
+  &:hover {
+    filter: grayscale(0);
+    transform: scale(1.2);
+  }
+}
+// every h2 after line
+h2 {
+  position: relative;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  &::after {
+    transform: translate(-50%, 2rem);
+    width: 7.5rem;
+    height: 0.1rem;
+    background-color: $gray;
+  }
+  &::before {
+    transform: translate(-50%, 1.96rem);
+    width: 3rem;
+    height: 0.2rem;
+    background-color: $textHoverColor;
+    z-index: 1;
+  }
+}
+// SERVICES cards
+.card-title {
+  cursor: pointer;
+}
+.hovUp {
+  transition: 0.5s all ease;
+  &:hover {
+    transform: translateY(-0.8rem);
+  }
+}
+// main button hover text color
+.btn:hover {
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+i {
+  transition: 0.3s all ease;
+  &:hover {
+    background-color: $textHoverColor !important;
+  }
+}
+// Call To Action div background
+.bg-img {
+  background:
+    linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)),
+    url(../images/cta-bg.webp) center fixed;
+  background-size: cover;
+}
+// team members after line
+p.after::after {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 1px;
+  background-color: $textHoverColor;
+  bottom: 0;
+  left: 0;
+  transform: translate(0%, 0.5rem);
+  // center line in small screens
+  @media screen and (max-width: 991px) {
+    left: 50%;
+    transform: translate(-50%, 0.5rem);
+  }
+}

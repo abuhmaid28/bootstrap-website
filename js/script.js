@@ -1,31 +1,21 @@
-(function () {
-  "use strict";
+// change navbar color
+AOS.init();
 
-  var $projects = $(".projects");
+function userScroll() {
+  const navbar = document.querySelector("nav");
 
-  $projects.isotope({
-    itemSelector: ".item",
-    layoutMode: "fitRows",
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add("bg-half");
+    } else {
+      navbar.classList.remove("bg-half");
+    }
   });
+}
+document.addEventListener("DOMContentLoaded", userScroll);
 
-  $("ul.filters > li").on("click", function (e) {
-    e.preventDefault();
-
-    var filter = $(this).attr("data-filter");
-
-    $("ul.filters > li").removeClass("active");
-    $(this).addClass("active");
-
-    $projects.isotope({ filter: filter });
-  });
-
-  $(".card")
-    .mouseenter(function () {
-      $(this).find(".card-overlay").css({ top: "-100%" });
-      $(this).find(".card-hover").css({ top: "0" });
-    })
-    .mouseleave(function () {
-      $(this).find(".card-overlay").css({ top: "0" });
-      $(this).find(".card-hover").css({ top: "100%" });
-    });
-})(jQuery);
+// loading animation
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
+  loader.style.display = "none";
+});

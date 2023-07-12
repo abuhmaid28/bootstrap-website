@@ -25,7 +25,6 @@ $spacers: (
 $button-radius: 50px;
 $button-padding-x: 30px;
 $button-padding-y: 10px;
-
 $btn-border-radius: $button-radius;
 $btn-border-radius-sm: $button-radius;
 $btn-border-radius-lg: $button-radius;
@@ -36,15 +35,15 @@ $btn-padding-x: $button-padding-x;
 $btn-padding-x-lg: $button-padding-x;
 $btn-padding-x-sm: $button-padding-x;
 $navbar-toggler-border-radius: 5px;
+// main font-sizes
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
-
 $h1-font-size: $font-size-base * 2.5;
 $h2-font-size: $font-size-base * 2;
 $h3-font-size: $font-size-base * 1.75;
 $h4-font-size: $font-size-base * 1.5;
 $h5-font-size: $font-size-base * 1.25;
 $h6-font-size: $font-size-base;
-
+// font-sizes change
 $font-sizes: (
   1: $h1-font-size,
   2: $h2-font-size,
@@ -53,8 +52,8 @@ $font-sizes: (
   5: $h5-font-size,
   6: $h6-font-size,
   7: $font-size-base * 0.85,
+  8: $font-size-base * 0.65,
 );
-
 // Input
 $input-radius: 0px;
 $input-btn-padding-y: 1rem;
@@ -62,8 +61,8 @@ $input-btn-padding-x: 1rem;
 $input-border-radius: $input-radius;
 $input-border-radius-sm: $input-radius;
 $input-border-radius-lg: $input-radius;
-$input-border-color: #666;
-
+$input-focus-box-shadow: none;
+// accordion
 $accordion-icon-width: 1rem;
 $accordion-icon-active-color: $info;
 $enable-negative-margins: true;
