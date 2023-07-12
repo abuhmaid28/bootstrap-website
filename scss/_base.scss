@@ -64,7 +64,7 @@ a {
   text-decoration: none;
   transition: 0.3s all ease;
 }
-i {
+i.text-primary {
   transition: 0.3s all ease;
   &:hover {
     background-color: $textHoverColor !important;

@@ -64,10 +64,10 @@ a {
   transition: 0.3s all ease;
 }
 
-i {
+i.text-primary {
   transition: 0.3s all ease;
 }
-i:hover {
+i.text-primary:hover {
   background-color: #47b2e4 !important;
 }
 
