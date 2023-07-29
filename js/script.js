@@ -1,5 +1,7 @@
 // change navbar color
-AOS.init();
+AOS.init({
+  once: true,
+});
 
 function userScroll() {
   const navbar = document.querySelector("nav");
@@ -14,8 +16,19 @@ function userScroll() {
 }
 document.addEventListener("DOMContentLoaded", userScroll);
 
-// loading animation
-window.addEventListener("load", function () {
-  const loader = document.getElementById("loader");
-  loader.style.display = "none";
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggler = document.querySelector(".navbar-toggler");
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+  function toggleNavbarCollapse() {
+    navbarCollapse.classList.toggle("show");
+  }
+  navToggler.addEventListener("click", toggleNavbarCollapse);
+  const ancorLinks = document.querySelectorAll(".nav-link");
+  ancorLinks.forEach((ancor) => {
+    ancor.addEventListener("click", function () {
+      if (navbarCollapse.classList.contains("show")) {
+        navbarCollapse.classList.remove("show");
+      }
+    });
+  });
 });
