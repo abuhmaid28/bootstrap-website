@@ -17,12 +17,7 @@ function userScroll() {
 document.addEventListener("DOMContentLoaded", userScroll);
 
 document.addEventListener("DOMContentLoaded", function () {
-  const navToggler = document.querySelector(".navbar-toggler");
   const navbarCollapse = document.querySelector(".navbar-collapse");
-  function toggleNavbarCollapse() {
-    navbarCollapse.classList.toggle("show");
-  }
-  navToggler.addEventListener("click", toggleNavbarCollapse);
   const ancorLinks = document.querySelectorAll(".nav-link");
   ancorLinks.forEach((ancor) => {
     ancor.addEventListener("click", function () {
